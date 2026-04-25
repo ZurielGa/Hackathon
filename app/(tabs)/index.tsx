@@ -1,15 +1,16 @@
-import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Image } from 'expo-image';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import i18n from '../../constants/i18n';
+
 
 export default function HomeScreen() {
 
   const router = useRouter();
   const [language, setLanguage] = useState('es');
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = (lang: string) => {
     setLanguage(lang);
   };
 
